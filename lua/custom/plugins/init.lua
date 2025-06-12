@@ -8,6 +8,9 @@ return {
     opts = {},
     config = function()
       vim.g.copilot_no_tab_map = true
+      vim.g.copilot_filetypes = {
+        ['*'] = false, -- disable all filetypes by default
+      }
       vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
       vim.api.nvim_set_keymap('i', '<C-k>', 'copilot#Dismiss()', { expr = true, silent = true, noremap = true })
     end,

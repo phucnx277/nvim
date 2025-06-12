@@ -685,7 +685,17 @@ require('lazy').setup({
         ts_ls = {},
         prettier = {},
         eslint = {},
-
+        emmet_ls = {
+          capabilities = {
+            textDocument = {
+              completion = {
+                completionItem = {
+                  snippetSupport = true,
+                },
+              },
+            },
+          },
+        },
         --
 
         lua_ls = {
