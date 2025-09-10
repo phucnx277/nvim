@@ -123,7 +123,7 @@ end)
 vim.o.breakindent = true
 
 -- Save undo history
-vim.o.undofile = true
+vim.o.undofile = false
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
@@ -769,6 +769,8 @@ require('lazy').setup({
         typescriptreact = { 'prettier', stop_after_first = true },
         javascriptreact = { 'prettier', stop_after_first = true },
         scss = { 'prettier', stop_after_first = true },
+        css = { 'prettier', stop_after_first = true },
+        json = { 'prettier', stop_after_first = true },
       },
     },
   },
