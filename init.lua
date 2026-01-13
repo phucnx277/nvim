@@ -690,6 +690,14 @@ require('lazy').setup({
             },
           },
         },
+        cssls = {
+          settings = {
+            css = { validate = true },
+            scss = { validate = true },
+          },
+        },
+        tailwindcss = {},
+        emmet_ls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -764,13 +772,14 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettier', stop_after_first = true },
-        typescript = { 'prettier', stop_after_first = true },
-        typescriptreact = { 'prettier', stop_after_first = true },
-        javascriptreact = { 'prettier', stop_after_first = true },
-        scss = { 'prettier', stop_after_first = true },
-        css = { 'prettier', stop_after_first = true },
-        json = { 'prettier', stop_after_first = true },
+        javascript = { 'prettier' },
+        typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        scss = { 'prettier' },
+        css = { 'prettier' },
+        json = { 'prettier' },
+        html = { 'prettier' },
       },
     },
   },
@@ -974,7 +983,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
